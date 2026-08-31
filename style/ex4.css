@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+    color: #e6e6e6;
+}
+
+header {
+    padding-left: 30px;
+    background: linear-gradient(45deg, #0f3460, #533483);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+header h1 {
+    font-size: 40px;
+    color: #fff;
+}
+
+header svg {
+    height: 120px;
+    width: 120px;
+    fill: #fff;
+    transition: ease-in-out 200ms;
+}
+
+header svg:hover {
+    fill: #ccc;
+    transform: translateY(-5px);
+}
+
+form {
+    margin: 50px;
+    width: 600px;
+    display: grid;
+    row-gap: 1em;
+}
+
+form.oculto {
+    display: none;
+}
+
+form input,
+form select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+form input[type="submit"],
+form input[type="button"] {
+    cursor: pointer;
+    background-color: #533483;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 150ms;
+}
+
+form input[type="submit"]:hover,
+form input[type="button"]:hover {
+    background-color: #7048a8;
+}
+
+.reservas {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.reservas .card {
+    padding: 15px;
+    background-color: #0f3460;
+    color: white;
+    border-radius: 15px;
+    border-left: 6px solid #533483;
+}
+
+.reservas .card h3 {
+    margin-bottom: 8px;
+}
+
+.reservas .card p {
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+.reservas .card.cafe {
+    border-left-color: #e0b400;
+}
+
+.relatorio {
+    margin: 50px;
+    padding: 20px;
+    background-color: #16213e;
+    border-radius: 15px;
+    max-width: 700px;
+}
+
+.relatorio h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #533483;
+    padding-bottom: 8px;
+}
+
+.relatorio h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #ffd54f;
+}
+
+.relatorio p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.relatorio .tipo-item {
+    background-color: #0f3460;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}

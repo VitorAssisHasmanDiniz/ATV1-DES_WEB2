@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3 - Controle de Producao</title>
+    <link rel="stylesheet" href="../style/ex3.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="e6e6e6">
+                <path
+                    d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+            </svg>
+        </a>
+        <h1>Controle de Producao</h1>
+    </header>
+    <main>
+        <form id="formOrdem">
+            <input type="text" name="codigoOrdem" id="codigoOrdem" placeholder="Codigo da ordem (unico)">
+            <input type="text" name="codigoProduto" id="codigoProduto" placeholder="Codigo do produto">
+            <select name="tipoProduto" id="tipoProduto">
+                <option value="">Selecione o tipo do produto</option>
+                <option value="1">1 - Padrao</option>
+                <option value="2">2 - Premium</option>
+                <option value="3">3 - Sob encomenda</option>
+            </select>
+            <input type="number" name="quantidade" id="quantidade" placeholder="Quantidade produzida" min="1">
+            <input type="number" name="custoUnitario" id="custoUnitario" placeholder="Custo unitario de producao (R$)"
+                min="0" step="0.01">
+            <input type="number" name="estoqueInicial" id="estoqueInicial" placeholder="Estoque inicial do produto"
+                min="0">
+            <input type="submit" value="Cadastrar Ordem">
+            <input type="button" value="Relatorio" onclick="gerarRelatorio()">
+        </form>
+        <div class="ordens"></div>
+        <div class="relatorio"></div>
+    </main>
+    <script src="../scripts/ex3.js"></script>
+</body>
+
+</html>

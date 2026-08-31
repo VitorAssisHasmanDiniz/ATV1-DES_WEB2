@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4 - Reservas de Hotel</title>
+    <link rel="stylesheet" href="../style/ex4.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="e6e6e6">
+                <path
+                    d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+            </svg>
+        </a>
+        <h1>Reservas de Hotel</h1>
+    </header>
+    <main>
+        <form id="formConfig">
+            <input type="number" name="valorBase" id="valorBase" placeholder="Valor base da diaria padrao (R$)" min="0"
+                step="0.01">
+            <input type="number" name="valorCafe" id="valorCafe"
+                placeholder="Valor do cafe da manha por hospede/dia (R$)" min="0" step="0.01">
+            <input type="submit" value="Confirmar Configuracao">
+        </form>
+
+        <form id="formReserva" class="oculto">
+            <input type="text" name="codigoReserva" id="codigoReserva" placeholder="Codigo da reserva (unico)">
+            <select name="tipoQuarto" id="tipoQuarto">
+                <option value="">Selecione o tipo de quarto</option>
+                <option value="S">S - Standard</option>
+                <option value="L">L - Luxo</option>
+                <option value="P">P - Premium</option>
+            </select>
+            <select name="temporada" id="temporada">
+                <option value="">Selecione a temporada</option>
+                <option value="B">B - Baixa</option>
+                <option value="A">A - Alta</option>
+                <option value="F">F - Feriado</option>
+            </select>
+            <input type="number" name="diarias" id="diarias" placeholder="Quantidade de diarias" min="1">
+            <input type="number" name="hospedes" id="hospedes" placeholder="Numero de hospedes" min="1">
+            <select name="cafeIncluso" id="cafeIncluso">
+                <option value="">Cafe da manha incluso?</option>
+                <option value="S">S - Sim</option>
+                <option value="N">N - Nao</option>
+            </select>
+            <input type="submit" value="Cadastrar Reserva">
+            <input type="button" value="Relatorio" onclick="gerarRelatorio()">
+        </form>
+
+        <div class="reservas"></div>
+        <div class="relatorio"></div>
+    </main>
+    <script src="../scripts/ex4.js"></script>
+</body>
+
+</html>

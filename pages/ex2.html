@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../style/ex2.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="e6e6e6">
+                <path
+                    d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+            </svg>
+        </a>
+        <h1>Folha de Pagamento</h1>
+    </header>
+    <main>
+        <form>
+            <input type="text" name="codigo" id="codigo" placeholder="Digite o código do funcionário">
+
+            <input type="number" name="horas" id="horas" placeholder="Digite as horas trabalhadas" min="0">
+
+            <select name="categoria" id="categoria">
+                <option value="">Selecione a categoria</option>
+                <option value="F">Funcionário operacional</option>
+                <option value="G">Gerente</option>
+            </select>
+
+            <select name="turno" id="turno">
+                <option value="">Selecione o turno</option>
+                <option value="M">Matutino</option>
+                <option value="V">Vespertino</option>
+                <option value="N">Noturno</option>
+            </select>
+
+            <input type="number" name="avaliacao" id="avaliacao" placeholder="Digite a avaliação (0 a 10)" min="0"
+                max="10" step="0.01">
+
+            <input type="number" name="salarioMinimo" id="salarioMinimo" placeholder="Digite o salário mínimo" min="0"
+                step="0.01">
+
+            <input type="submit" value="Cadastrar funcionário">
+        </form>
+
+        <button onclick="gerarRelatorio()">Gerar relatório</button>
+
+        <div class="funcionarios"></div>
+    </main>
+    <script src="../scripts/ex2.js"></script>
+</body>
+
+</html>

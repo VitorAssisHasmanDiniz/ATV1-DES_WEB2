@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5 - Treinos Esportivos</title>
+    <link rel="stylesheet" href="../style/ex5.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="e6e6e6">
+                <path
+                    d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+            </svg>
+        </a>
+        <h1>Treinos Esportivos</h1>
+    </header>
+    <main>
+        <form id="formConfig">
+            <input type="number" name="cargaMaxima" id="cargaMaxima"
+                placeholder="Carga maxima semanal recomendada (pontos)" min="0" step="0.1">
+            <input type="submit" value="Confirmar Configuracao">
+        </form>
+
+        <form id="formTreino" class="oculto">
+            <input type="text" name="codigoTreino" id="codigoTreino" placeholder="Codigo do treino (unico)">
+            <input type="text" name="nomeJogador" id="nomeJogador" placeholder="Nome do jogador">
+            <select name="posicao" id="posicao">
+                <option value="">Selecione a posicao</option>
+                <option value="G">G - Goleiro</option>
+                <option value="Z">Z - Zagueiro</option>
+                <option value="M">M - Meio-campo</option>
+                <option value="A">A - Atacante</option>
+            </select>
+            <select name="tipoTreino" id="tipoTreino">
+                <option value="">Selecione o tipo de treino</option>
+                <option value="F">F - Fisico</option>
+                <option value="T">T - Tecnico</option>
+                <option value="E">E - Estrategico</option>
+            </select>
+            <input type="number" name="duracao" id="duracao" placeholder="Duracao (minutos)" min="1">
+            <input type="number" name="intensidade" id="intensidade" placeholder="Intensidade (1 a 10)" min="1"
+                max="10">
+            <input type="submit" value="Cadastrar Treino">
+            <input type="button" value="Relatorio" onclick="gerarRelatorio()">
+        </form>
+
+        <div class="treinos"></div>
+        <div class="relatorio"></div>
+    </main>
+    <script src="../scripts/ex5.js"></script>
+</body>
+
+</html>

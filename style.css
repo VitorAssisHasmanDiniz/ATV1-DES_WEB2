@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1a0a2b 0%, #2b0a3a 100%);
+    color: #e6e6e6;
+}
+
+header {
+    padding-left: 30px;
+    background: linear-gradient(45deg, #4a0072, #c2185b);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+header h1 {
+    font-size: 40px;
+    color: #fff;
+}
+
+header svg {
+    height: 120px;
+    width: 120px;
+    fill: #fff;
+    transition: ease-in-out 200ms;
+}
+
+header svg:hover {
+    fill: #ccc;
+    transform: translateY(-5px);
+}
+
+main {
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.exercicios {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+li {
+    list-style: none;
+}
+
+.ex {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    box-sizing: border-box;
+
+    background-color: #3a1050;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 15px;
+    border-left: 6px solid #c2185b;
+
+    transition: 0.2s;
+}
+
+.ex-numero {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #e91e8c;
+}
+
+.ex-titulo {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.ex:hover {
+    background-color: #4a1466;
+    transform: translateY(-5px);
+}
+
+.ex:active {
+    transform: translateY(0);
+}

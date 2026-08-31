@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1c1c1c 0%, #333 100%);
+    color: #e6e6e6;
+}
+
+header {
+    padding-left: 30px;
+    background: linear-gradient(45deg, #444, #888);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+header h1 {
+    font-size: 40px;
+    color: #fff;
+}
+
+header svg {
+    height: 120px;
+    width: 120px;
+    fill: #fff;
+    transition: ease-in-out 200ms;
+}
+
+header svg:hover {
+    fill: #ccc;
+    transform: translateY(-5px);
+}
+
+form {
+    margin: 50px;
+    width: 600px;
+    display: grid;
+    row-gap: 1em;
+}
+
+form input,
+form select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+form input[type="submit"],
+form input[type="button"] {
+    cursor: pointer;
+    background-color: #666;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 150ms;
+}
+
+form input[type="submit"]:hover,
+form input[type="button"]:hover {
+    background-color: #999;
+}
+
+.ordens {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.ordens .card {
+    padding: 15px;
+    background-color: #444;
+    color: white;
+    border-radius: 15px;
+    border-left: 6px solid #888;
+}
+
+.ordens .card h3 {
+    margin-bottom: 8px;
+}
+
+.ordens .card p {
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+.ordens .card.alto {
+    border-left-color: #e0b400;
+}
+
+.ordens .card.critico {
+    border-left-color: #d13c3c;
+}
+
+.relatorio {
+    margin: 50px;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    max-width: 700px;
+}
+
+.relatorio h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #888;
+    padding-bottom: 8px;
+}
+
+.relatorio h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #ffd54f;
+}
+
+.relatorio p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.relatorio .produto-item {
+    background-color: #3a3a3a;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
