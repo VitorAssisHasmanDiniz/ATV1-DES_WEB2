@@ -3,7 +3,7 @@ const funcionariosDiv = document.querySelector(".funcionarios")
 
 const funcionarios = []
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", function (event) {
     event.preventDefault()
 
     const codigo = document.querySelector("#codigo").value.trim()
